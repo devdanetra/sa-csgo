@@ -10,7 +10,6 @@ Supports Ubuntu 18.04+.
 
 - [@devdanetra](https://www.github.com/devdanetra)
 
-
 ## Features
 
 - Easy to use **GUI**
@@ -21,29 +20,26 @@ Supports Ubuntu 18.04+.
 - **Auto update** **(Coming Soon)**
 - Updates you via email or telegram if a new patch is available. **(Coming Soon)**
 
-
 ## Requirements
 
 - Python 3.10
 ## Installation
-
 
 To install **SA-CS:GO** you can use pip:
 ```bash
   pip install sa-csgo
 ```
 
-
 ## Documentation
-
-show available commands and options
-```bash
-  sa-csgo --help
-```
 
 opens gui
 ```bash
   sa-csgo gui
+```
+
+show available commands and options
+```bash
+  sa-csgo --help
 ```
 
 Installs latest SteamCMD version
