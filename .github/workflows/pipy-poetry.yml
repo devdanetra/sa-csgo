@@ -13,7 +13,6 @@ jobs:
     steps:
     - uses: JRubics/poetry-publish@v1.16
       with:
-        python_version: 3.10
-        poetry_version: latest
         pypi_token: ${{ secrets.PIPYTOKEN }}
+        repository_name: sa-csgo
         build_format: wheel
