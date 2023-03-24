@@ -16,4 +16,4 @@ jobs:
         pypi_token: ${{ secrets.PIPYTOKEN }}
         repository_name: sa-csgo
         build_format: wheel
-        package_directory: ../../
+        package_directory: $GITHUB_WORKSPACE
