@@ -15,5 +15,5 @@ jobs:
       with:
         python_version: 3.10
         poetry_version: latest
-        pypi_token: pypi-AgEIcHlwaS5vcmcCJGQ0NmI2ZDM5LTcyMDktNGE1ZS1iYzZlLTI5Y2NlZjIyMmQzNgACKlszLCIwMjg2MGZlOC01MDJhLTRlYTktYWVkOS03ZjBmMTI2YzhhNjQiXQAABiC9AX1_PM0SMy2LdVwcu97nHfPtwQeWLgbO6XVNTl9c6g
+        pypi_token: ${{ secrets.SuperSecret }}
         build_format: wheel
