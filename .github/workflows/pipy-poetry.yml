@@ -15,5 +15,5 @@ jobs:
       with:
         python_version: 3.10
         poetry_version: latest
-        pypi_token: ${{ secrets.SuperSecret }}
+        pypi_token: ${{ secrets.PIPYTOKEN }}
         build_format: wheel
