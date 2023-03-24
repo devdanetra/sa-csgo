@@ -1,8 +1,6 @@
 import typer
-from addons.gui import Procedure
-
-
-from utils.os_commands import installSteamCMD, verifySteamCMDInstallation
+from sa_csgo.addons.gui import Procedure
+from sa_csgo.utils.os_commands import installSteamCMD, verifySteamCMDInstallation
 
 
 class CustomProcedure(Procedure):
