@@ -14,6 +14,5 @@ jobs:
     - uses: JRubics/poetry-publish@v1.16
       with:
         pypi_token: ${{ secrets.PIPYTOKEN }}
-        repository_name: sa-csgo
         build_format: wheel
-        package_directory: $GITHUB_WORKSPACE
+        package_directory: ./
