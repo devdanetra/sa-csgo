@@ -1,0 +1,19 @@
+name: Publish to PiPy
+
+on: 
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+jobs:
+  pipy_publish:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: JRubics/poetry-publish@v1.16
+      with:
+        python_version: 3.10
+        poetry_version: latest
+        pypi_token: pypi-AgEIcHlwaS5vcmcCJGQ0NmI2ZDM5LTcyMDktNGE1ZS1iYzZlLTI5Y2NlZjIyMmQzNgACKlszLCIwMjg2MGZlOC01MDJhLTRlYTktYWVkOS03ZjBmMTI2YzhhNjQiXQAABiC9AX1_PM0SMy2LdVwcu97nHfPtwQeWLgbO6XVNTl9c6g
+        build_format: wheel
