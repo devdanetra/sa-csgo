@@ -2,8 +2,8 @@ import datetime
 import platform
 
 import typer
-from addons.gui import Procedure
-from utils.os_commands import installCSGOServer, verifySteamCMDInstallation
+from sa_csgo.addons.gui import Procedure
+from sa_csgo.utils.os_commands import installCSGOServer, verifySteamCMDInstallation
 from steam.client import SteamClient
 from rich import print
 from rich.prompt import Prompt

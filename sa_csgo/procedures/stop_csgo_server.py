@@ -1,7 +1,5 @@
-import typer
-from addons.gui import Procedure
-from rich.prompt import Prompt
-from utils.os_commands import stopCSGOServer, verifyCSGOServerInstallation
+from sa_csgo.addons.gui import Procedure
+from sa_csgo.utils.os_commands import stopCSGOServer, verifyCSGOServerInstallation
 
 
 class CustomProcedure(Procedure):

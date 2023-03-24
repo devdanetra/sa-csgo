@@ -8,7 +8,7 @@ from rich.table import Table
 from rich.align import Align
 from rich.panel import Panel
 from rich import box
-from utils.os_commands import verifyCSGOServerInstallation, verifySteamCMDInstallation
+from sa_csgo.utils.os_commands import verifyCSGOServerInstallation, verifySteamCMDInstallation
 from rich import print
 from rich.padding import Padding
 
@@ -29,12 +29,15 @@ class Procedure(ABC):
     def run():
         pass
 
+
+procedures_directory_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "procedures")
+
 procedures: List[Procedure] = [];
-procedure_files = [f for f in os.listdir('./procedures') if f.endswith('.py')]
+procedure_files = [f for f in os.listdir(procedures_directory_path) if f.endswith('.py')]
 
 for procedurePath in procedure_files:
     module_name = procedurePath[:-3]
-    procedureClasses = [proc for proc in inspect.getmembers(importlib.import_module(f'procedures.{module_name}'),inspect.isclass) if proc[0] == 'CustomProcedure']
+    procedureClasses = [proc for proc in inspect.getmembers(importlib.import_module(f'sa_csgo.procedures.{module_name}'),inspect.isclass) if proc[0] == 'CustomProcedure']
     procedures.insert(0, procedureClasses[0][1])
 
 procedures.sort(key=lambda x: x.id);

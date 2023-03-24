@@ -2,10 +2,10 @@ import typer
 from rich import print
 from rich.console import Console
 from rich.prompt import Prompt
-from addons.gui import execProcedure, printGUIProcedures, printStatus
-from utils.config import ConfigManager
-from utils.format import printLogo
-from utils.os_commands import installCSGOServer, installSteamCMD, openServerConsole, startCSGOServer, stopCSGOServer
+from sa_csgo.addons.gui import execProcedure, printGUIProcedures, printStatus
+from sa_csgo.utils.config import ConfigManager
+from sa_csgo.utils.format import printLogo
+from sa_csgo.utils.os_commands import installCSGOServer, installSteamCMD, openServerConsole, startCSGOServer, stopCSGOServer
 
 installApp = typer.Typer()
 manageServerApp = typer.Typer()
@@ -84,7 +84,3 @@ def restartServer():
 def openConsole():
     openServerConsole()
     return 
-
-
-if __name__ == "__main__":
-    app()

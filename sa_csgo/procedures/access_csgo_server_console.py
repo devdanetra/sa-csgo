@@ -1,6 +1,5 @@
-import subprocess
-from addons.gui import Procedure
-from utils.os_commands import openServerConsole
+from sa_csgo.addons.gui import Procedure
+from sa_csgo.utils.os_commands import openServerConsole
 
 class CustomProcedure(Procedure):
     id = 3

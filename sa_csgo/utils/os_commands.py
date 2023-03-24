@@ -8,7 +8,7 @@ import subprocess
 import tarfile
 from rich import print
 import requests
-from utils.config import ConfigManager
+from sa_csgo.utils.config import ConfigManager
 
 steamCMDPath = ConfigManager.get('steamCMDPath')
 csgoServerPath = ConfigManager.get('csgoServerPath')

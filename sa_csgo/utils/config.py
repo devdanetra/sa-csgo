@@ -1,21 +1,21 @@
 import json
+import os
+import pkg_resources
 
-CONFIG_DIRECTORY_PATH = './test/config'
-CONFIG_FILE_NAME = 'config'
-
+config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "config.json")
 
 class ConfigManager:
     data = '';
 
     @staticmethod
     def get(name):
-        with open(f"{CONFIG_DIRECTORY_PATH}/{CONFIG_FILE_NAME}.json", "r") as file:
+        with open(config_file_path, "r") as file:
             data = json.load(file)
             return data['config'][name]
 
     @staticmethod
     def getEntire(name):
-        with open(f"{CONFIG_DIRECTORY_PATH}/{CONFIG_FILE_NAME}.json", "r") as file:
+        with open(config_file_path, "r") as file:
             return json.load(file)
 
     @staticmethod
@@ -23,6 +23,6 @@ class ConfigManager:
         data = ConfigManager.getEntire()
         data['config'][name] = value
         
-        with open(f"{CONFIG_DIRECTORY_PATH}/{CONFIG_FILE_NAME}.json", "w") as file:
+        with open(config_file_path, "w") as file:
             json.dump(data,file)
             return value
