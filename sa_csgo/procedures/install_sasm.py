@@ -1,4 +1,4 @@
-from addons.gui import Procedure
+from sa_csgo.addons.gui import Procedure
 
 
 class CustomProcedure(Procedure):

@@ -1,7 +1,7 @@
-from addons.gui import Procedure
+from sa_csgo.addons.gui import Procedure
 import typer
 
-from utils.os_commands import enableLiveKernel, isRealTimeKernelEnabled, isUbuntuProConnected
+from sa_csgo.utils.os_commands import enableLiveKernel, isRealTimeKernelEnabled, isUbuntuProConnected
 
 class CustomProcedure(Procedure):
     id=5

@@ -3,12 +3,12 @@
 
 A python application that provides faster and user-friendly operations for cs:go server administrators via CLI or GUI.
 
-Mainly meant to be used together with STORM Server.
+Mainly meant to be used together with STORM Server and/or STORMsys appliances.
+Supports Ubuntu 18.04+.
 
 ## Authors
 
 - [@devdanetra](https://www.github.com/devdanetra)
-
 
 ## Features
 
@@ -16,18 +16,38 @@ Mainly meant to be used together with STORM Server.
 - Install/Upgrade **SteamCMD**
 - Install/Upgrade **CS:GO Dedicated Server**
 - **Versions selector**
-- Start/Stop server & easily access console
+- Start server & easily access console
 - **Auto update** **(Coming Soon)**
 - Updates you via email or telegram if a new patch is available. **(Coming Soon)**
 
+## Requirements
 
-
+- Python 3.10
 ## Installation
 
-To install **SA-CS:GO** you hav two options
+To install **SA-CS:GO** you can use pip:
+```bash
+  pip install sa-csgo
+```
 
-#### Option 1 - Run the installation script (Recommended):
+## Documentation
 
-#### Option 2 - Manual installation:
+opens gui
+```bash
+  sa-csgo gui
+```
 
+show available commands and options
+```bash
+  sa-csgo --help
+```
 
+Installs latest SteamCMD version
+```bash
+  sa-csgo install csgoserver
+```
+
+Installs Counter Strike server, multiple versions are available
+```bash
+  sa-csgo install csgoserver
+```
