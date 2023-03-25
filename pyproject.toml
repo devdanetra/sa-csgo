@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sa-csgo"
-version = "1.0.1"
+version = "1.0.2"
 description = "A python application for ubuntu server that provides faster and user-friendly operations for cs:go server administrators via CLI or GUI."
 authors = ["Francesco D'anetra <devdanetra@outlook.com>"]
 license = "MIT"
