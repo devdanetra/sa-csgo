@@ -20,6 +20,9 @@ Supports Ubuntu 18.04+.
 - **Auto update** **(Coming Soon)**
 - Updates you via email or telegram if a new patch is available. **(Coming Soon)**
 
+![Gui preview](https://i.imgur.com/SdaVzHU.gif)
+
+
 ## Requirements
 
 - Python 3.10
@@ -44,7 +47,7 @@ show available commands and options
 
 Installs latest SteamCMD version
 ```bash
-  sa-csgo install csgoserver
+  sa-csgo install steamcmd
 ```
 
 Installs Counter Strike server, multiple versions are available
