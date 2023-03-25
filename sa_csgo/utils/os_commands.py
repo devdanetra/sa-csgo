@@ -85,7 +85,7 @@ def installSteamCMD():
             print("[white bold]Installing prerequisites..")
             installAptPackage('lib32gcc-s1')
             print("[white bold]Downloading SteamCMD..")
-            steamCMDPath = utils.config.ConfigManager.get('steamCMDPath')
+            steamCMDPath = ConfigManager.get('steamCMDPath')
             tarFile = f'{steamCMDPath}/steamcmd_linux.tar.gz'
             os.makedirs(os.path.dirname(tarFile), exist_ok=True)
             response = requests.get("https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz", stream=True)
