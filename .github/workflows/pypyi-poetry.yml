@@ -1,4 +1,4 @@
-name: Publish to PiPy
+name: Publish to pypyi
 
 on: 
   pull_request:
