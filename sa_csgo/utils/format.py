@@ -1,4 +1,4 @@
-import importlib
+import importlib.metadata
 from rich import print
 from rich.panel import Panel
 from rich.align import Align
