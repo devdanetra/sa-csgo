@@ -44,26 +44,22 @@ def csgoserver(version = 'public'):
 
 @manageServerApp.command("start", help= 'Starts server.',)
 def startServer(port='27015', public=False, token=''):
-
-    configToken = ConfigManager.get(token)
-    if configToken:
-        token = configToken
-    else:
-        ConfigManager.setProperty('token',token)
-
-    configPort = ConfigManager.get(port)
-    if configPort:
-        port = configPort
-    else:
-        ConfigManager.setProperty('port',port)
-
-    configPublic = ConfigManager.get(public)
-    if configPublic:
-        port = configPublic
-    else:
-        ConfigManager.setProperty('public',public)
-
     startCSGOServer(port,public,token)
+    return 
+
+@manageServerApp.command("token", help= 'Set server token.',)
+def setToken(token):
+    ConfigManager.setProperty('token',token)
+    return 
+
+@manageServerApp.command("public", help= 'Set server publicity.',)
+def setPublic(public: bool):
+    ConfigManager.setProperty('token',public)
+    return 
+
+@manageServerApp.command("port", help= 'Set server port',)
+def setPort(port):
+    ConfigManager.setProperty('token',port)
     return 
 
 @manageServerApp.command("stop", help= 'Stops server.',)

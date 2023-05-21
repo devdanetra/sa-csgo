@@ -48,6 +48,25 @@ def verifyCSGOServerInstallation():
         return False
 
 def startCSGOServer(port = 27015, public = 'false', token = False):
+
+    configToken = ConfigManager.get(token)
+    if configToken:
+        token = configToken
+    else:
+        ConfigManager.setProperty('token',token)
+
+    configPort = ConfigManager.get(port)
+    if configPort:
+        port = configPort
+    else:
+        ConfigManager.setProperty('port',port)
+
+    configPublic = ConfigManager.get(public)
+    if configPublic:
+        port = configPublic
+    else:
+        ConfigManager.setProperty('public',public)
+
     tokenCommand = ['+sv_steamaccount', token] if token else []
     processName = craftScreenProcess(csgoServerOperationsProcessName, [f'{csgoServerPath}/srcds_run', '-game', 'csgo', '-port', port, '+game_mode','1','+map','de_dust2','-tickrate 128'] + tokenCommand)
     return processName
